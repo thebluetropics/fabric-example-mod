@@ -1,0 +1,15 @@
+# Gradle
+/.gradle/
+/build/
+
+# Maven
+/repository/
+
+# Intellij IDEA
+/.idea/
+
+# Loom
+/run/
+
+# MacOS
+.DS_Store

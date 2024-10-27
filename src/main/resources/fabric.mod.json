@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "examplemod",
+  "version": "0.1.0-alpha",
+  "name": "Example Mod",
+  "authors": ["thebluetropics"],
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "io.github.thebluetropics.examplemod.ExampleMod"
+    ],
+    "client": [
+      "io.github.thebluetropics.examplemod.client.ExampleModClient"
+    ]
+  },
+  "mixins": [
+    {
+      "environment": "*",
+      "config": "examplemod.common.mixins.json"
+    },
+    {
+      "environment": "client",
+      "config": "examplemod.client.mixins.json"
+    }
+  ],
+  "depends": {
+    "minecraft": "1.20.6",
+    "fabricloader": ">=0.11.0",
+    "fabric-api": ">=0.97.8+1.20.6",
+    "java": ">=21"
+  }
+}

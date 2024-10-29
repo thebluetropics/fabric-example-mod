@@ -1,1 +1,1 @@
-A fabric example mod.
+An example Fabric mod.

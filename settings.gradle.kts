@@ -8,5 +8,3 @@ pluginManagement {
     }
   }
 }
-
-rootProject.name = "fabric-1.20.6-example-mod"

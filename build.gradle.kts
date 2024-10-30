@@ -17,8 +17,6 @@ dependencies {
 }
 
 loom {
-  splitEnvironmentSourceSets()
-
   mods {
     create(properties["mod_id"].toString()) {
       sourceSet("main")
@@ -27,7 +25,7 @@ loom {
 }
 
 java {
-  toolchain.languageVersion = JavaLanguageVersion.of(21)
+  toolchain.languageVersion = JavaLanguageVersion.of(8)
   withSourcesJar()
 }
 

@@ -1,9 +1,12 @@
 {
   "required": true,
   "package": "io.github.thebluetropics.examplemod.mixin",
-  "compatibilityLevel": "JAVA_21",
+  "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "TestMixin"
+    "ExampleMixin"
+  ],
+  "client": [
+    "client.ExampleMixinClient"
   ],
   "injectors": {
     "defaultRequire": 1

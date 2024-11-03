@@ -3,7 +3,7 @@ run-name: ${{ github.ref_name }}
 on:
   workflow_dispatch:
   release:
-    type: [published]
+    types: [published]
 jobs:
   publish:
     runs-on: ubuntu-latest

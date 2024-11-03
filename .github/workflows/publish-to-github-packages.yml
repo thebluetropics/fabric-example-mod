@@ -1,6 +1,9 @@
 name: Publish to Github Packages
 run-name: ${{ github.ref_name }}
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+  release:
+    type: [published]
 jobs:
   publish:
     runs-on: ubuntu-latest

@@ -48,6 +48,14 @@ tasks.processResources {
   }
 }
 
+tasks.named<Jar>("jar") {
+  from("LICENSE") {
+    rename {
+      "LICENSE-${properties["artifact_name"]}"
+    }
+  }
+}
+
 publishing {
   publications {
     create<MavenPublication>("mavenJava") {

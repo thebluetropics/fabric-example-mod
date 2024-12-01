@@ -26,6 +26,10 @@ loom {
 
 java {
   toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+  sourceCompatibility = JavaVersion.VERSION_21
+  targetCompatibility = JavaVersion.VERSION_21
+
   withSourcesJar()
 }
 
@@ -58,4 +62,5 @@ publishing {
 
 tasks.withType(JavaCompile::class.java).configureEach {
   options.encoding = "UTF-8"
+  options.release = 21
 }

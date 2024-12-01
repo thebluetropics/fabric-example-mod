@@ -33,6 +33,21 @@ java {
   withSourcesJar()
 }
 
+tasks.withType(JavaCompile::class.java).configureEach {
+  options.encoding = "UTF-8"
+  options.release = 21
+}
+
+tasks.processResources {
+  filesMatching("fabric.mod.json") {
+    filter { line ->
+      Regex("%([a-z_]+)%").replace(line) { match ->
+        properties[match.groupValues[1]]?.toString() ?: match.value
+      }
+    }
+  }
+}
+
 publishing {
   publications {
     create<MavenPublication>("mavenJava") {
@@ -58,9 +73,4 @@ publishing {
       }
     }
   }
-}
-
-tasks.withType(JavaCompile::class.java).configureEach {
-  options.encoding = "UTF-8"
-  options.release = 21
 }

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "id": "examplemod",
-  "version": "0.1.0-alpha+1.20.6",
+  "id": "%mod_id%",
+  "version": "%version%",
   "name": "Example Mod",
   "authors": ["thebluetropics"],
   "license": "MIT",
@@ -17,11 +17,11 @@
   "mixins": [
     {
       "environment": "*",
-      "config": "examplemod.common.mixins.json"
+      "config": "%mod_id%.common.mixins.json"
     },
     {
       "environment": "client",
-      "config": "examplemod.client.mixins.json"
+      "config": "%mod_id%.client.mixins.json"
     }
   ],
   "depends": {

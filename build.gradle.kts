@@ -3,14 +3,12 @@ plugins {
   id("maven-publish")
 }
 
-val minecraftVersion = properties["minecraft_version"] as String
-
 base {
-  archivesName = "${properties["artifact_name"].toString()}-fabric-${minecraftVersion}"
+  archivesName = "${properties["artifact_name"].toString()}-fabric"
 }
 
 dependencies {
-  minecraft("com.mojang:minecraft:${minecraftVersion}")
+  minecraft("com.mojang:minecraft:${properties["minecraft_version"].toString()}")
   mappings("net.fabricmc:yarn:${properties["mappings_version"].toString()}:v2")
   modImplementation("net.fabricmc:fabric-loader:${properties["fabric_loader_version"].toString()}")
   modImplementation("net.fabricmc.fabric-api:fabric-api:${properties["fabric_api_version"].toString()}")
@@ -34,7 +32,10 @@ java {
 publishing {
   publications {
     create<MavenPublication>("mavenJava") {
-      artifactId = base.archivesName.get() + "-${version}"
+      groupId    = project.group.toString()
+      artifactId = project.base.archivesName.toString()
+      version    = project.version.toString()
+
       from(components["java"])
     }
   }

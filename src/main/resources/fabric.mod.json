@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "examplemod",
-  "version": "0.1.0",
+  "version": "0.1.0-alpha+1.20.6",
   "name": "Example Mod",
   "authors": ["thebluetropics"],
   "license": "MIT",

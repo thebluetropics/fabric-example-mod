@@ -34,17 +34,17 @@ loom {
 }
 
 java {
-  toolchain.languageVersion = JavaLanguageVersion.of(21)
+  toolchain.languageVersion = JavaLanguageVersion.of(17)
 
-  sourceCompatibility = JavaVersion.VERSION_21
-  targetCompatibility = JavaVersion.VERSION_21
+  sourceCompatibility = JavaVersion.VERSION_17
+  targetCompatibility = JavaVersion.VERSION_17
 
   withSourcesJar()
 }
 
 tasks.withType(JavaCompile::class.java).configureEach {
   options.encoding = "UTF-8"
-  options.release = 21
+  options.release = 17
 }
 
 tasks.processResources {

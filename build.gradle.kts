@@ -17,6 +17,15 @@ dependencies {
 loom {
   splitEnvironmentSourceSets()
 
+  runs {
+    named("client") {
+      runDir = "run/client"
+    }
+    named("server") {
+      runDir = "run/server"
+    }
+  }
+
   mods {
     create(properties["mod_id"].toString()) {
       sourceSet("main")

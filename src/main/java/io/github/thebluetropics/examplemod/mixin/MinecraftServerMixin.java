@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(MinecraftServer.class)
-public class TestMixin {
+public class MinecraftServerMixin {
   @Inject(at = @At("HEAD"), method = "runServer")
   private void runServer(CallbackInfo info) {
     ExampleMod.LOGGER.info("Hello, World! (Common mixin)");

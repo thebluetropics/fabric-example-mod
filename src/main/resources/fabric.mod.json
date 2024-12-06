@@ -4,6 +4,7 @@
   "version": "%version%",
   "name": "Example Mod",
   "description": "An example Fabric mod",
+  "icon": "assets/%mod_id%/icon.png",
   "authors": [
     {
       "name": "thebluetropics",

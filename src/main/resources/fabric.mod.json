@@ -21,6 +21,14 @@
   },
   "contributors": [],
   "license": "MIT",
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://discord.com/invite/A9hgghDk48"
+      },
+      "update_checker": false
+    }
+  },
   "environment": "*",
   "entrypoints": {
     "main": [

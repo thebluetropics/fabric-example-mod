@@ -10,11 +10,19 @@ base {
   archivesName = "${artifactName}-fabric-${minecraftVersion}"
 }
 
+repositories {
+  maven {
+    name = "Terraformers"
+    url = uri("https://maven.terraformersmc.com/")
+  }
+}
+
 dependencies {
   minecraft("com.mojang:minecraft:${minecraftVersion}")
   mappings("net.fabricmc:yarn:${properties["mappings_version"].toString()}:v2")
   modImplementation("net.fabricmc:fabric-loader:${properties["fabric_loader_version"].toString()}")
   modImplementation("net.fabricmc.fabric-api:fabric-api:${properties["fabric_api_version"].toString()}")
+  modImplementation("com.terraformersmc:modmenu:${properties["modmenu_version"].toString()}")
 }
 
 loom {

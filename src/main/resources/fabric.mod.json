@@ -3,7 +3,8 @@
   "id": "%mod_id%",
   "version": "%version%",
   "name": "Example Mod",
-  "description": "An example Fabric mod",
+  "description": "An example Fabric mod by @thebluetropics",
+  "license": "MIT",
   "icon": "assets/%mod_id%/icon.png",
   "authors": [
     {
@@ -14,13 +15,12 @@
       }
     }
   ],
+  "contributors": [],
   "contact": {
     "homepage": "https://github.com/thebluetropics/fabric-example-mod",
     "sources": "https://github.com/thebluetropics/fabric-example-mod",
     "issues": "https://github.com/thebluetropics/fabric-example-mod/issues"
   },
-  "contributors": [],
-  "license": "MIT",
   "custom": {
     "modmenu": {
       "links": {
@@ -54,6 +54,6 @@
     "fabric-api": ">=0.97.8+1.20.6",
     "java": ">=21"
   },
-  "breaks": {},
-  "provides": []
+  "provides": [],
+  "breaks": {}
 }

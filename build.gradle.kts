@@ -3,6 +3,7 @@ plugins {
   id("maven-publish")
 }
 
+val modId = properties["mod_id"] as String
 val artifactName = properties["artifact_name"] as String
 val minecraftVersion = properties["minecraft_version"] as String
 
@@ -19,10 +20,10 @@ repositories {
 
 dependencies {
   minecraft("com.mojang:minecraft:${minecraftVersion}")
-  mappings("net.fabricmc:yarn:${properties["mappings_version"].toString()}:v2")
-  modImplementation("net.fabricmc:fabric-loader:${properties["fabric_loader_version"].toString()}")
-  modImplementation("net.fabricmc.fabric-api:fabric-api:${properties["fabric_api_version"].toString()}")
-  modImplementation("com.terraformersmc:modmenu:${properties["modmenu_version"].toString()}")
+  mappings("net.fabricmc:yarn:${properties["mappings_version"]}:v2")
+  modImplementation("net.fabricmc:fabric-loader:${properties["fabric_loader_version"]}")
+  modImplementation("net.fabricmc.fabric-api:fabric-api:${properties["fabric_api_version"]}")
+  modImplementation("com.terraformersmc:modmenu:${properties["modmenu_version"]}")
 }
 
 loom {
@@ -38,7 +39,7 @@ loom {
   }
 
   mods {
-    create(properties["mod_id"].toString()) {
+    create(modId) {
       sourceSet("main")
     }
   }
@@ -71,7 +72,7 @@ tasks.processResources {
 tasks.named<Jar>("jar") {
   from("LICENSE") {
     rename {
-      "LICENSE-${artifactName}"
+      "LICENSE_${modId}"
     }
   }
 }
@@ -79,9 +80,9 @@ tasks.named<Jar>("jar") {
 publishing {
   publications {
     create<MavenPublication>("mavenJava") {
-      groupId    = project.group.toString()
+      groupId = project.group.toString()
       artifactId = project.base.archivesName.get()
-      version    = project.version.toString()
+      version = project.version.toString()
 
       from(components["java"])
     }

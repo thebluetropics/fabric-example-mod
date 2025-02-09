@@ -1,6 +1,5 @@
 package io.github.thebluetropics.examplemod.client;
 
-import io.github.thebluetropics.examplemod.ExampleMod;
 import net.fabricmc.api.ClientModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -61,11 +61,11 @@ tasks.withType(JavaCompile::class.java).configureEach {
 
 tasks.processResources {
 	filesMatching("fabric.mod.json") {
-		filter { line ->
-			Regex("%([a-z_]+)%").replace(line) { match ->
-				properties[match.groupValues[1]]?.toString() ?: match.value
-			}
-		}
+		filter(fun(line: String): String {
+			return Regex("%([a-z_]+)%").replace(line, fun(match: MatchResult): String {
+				return properties[match.groupValues[1]]?.toString() ?: match.value
+			})
+		})
 	}
 }
 

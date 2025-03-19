@@ -1,1 +1,3 @@
 A professional, production-ready and robust example Fabric mod by [@thebluetropics](https://github.com/thebluetropics).
+
+Uses Gradle 8.12

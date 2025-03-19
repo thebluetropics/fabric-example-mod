@@ -72,7 +72,7 @@ tasks.processResources {
 tasks.named<Jar>("jar") {
 	from("LICENSE") {
 		rename {
-			"LICENSE_${modId}"
+			"LICENSE-${modId}"
 		}
 	}
 }

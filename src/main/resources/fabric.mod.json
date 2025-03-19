@@ -1,59 +1,59 @@
 {
-  "schemaVersion": 1,
-  "id": "%mod_id%",
-  "version": "%version%",
-  "name": "Example Mod",
-  "description": "An example Fabric mod by @thebluetropics",
-  "license": "MIT",
-  "icon": "assets/%mod_id%/icon.png",
-  "authors": [
-    {
-      "name": "thebluetropics",
-      "contact": {
-        "email": "thebluetropics@gmail.com",
-        "homepage": "https://github.com/thebluetropics"
-      }
-    }
-  ],
-  "contributors": [],
-  "contact": {
-    "homepage": "https://github.com/thebluetropics/fabric-example-mod",
-    "sources": "https://github.com/thebluetropics/fabric-example-mod",
-    "issues": "https://github.com/thebluetropics/fabric-example-mod/issues"
-  },
-  "custom": {
-    "modmenu": {
-      "links": {
-        "modmenu.discord": "https://discord.com/invite/A9hgghDk48"
-      },
-      "update_checker": false
-    }
-  },
-  "environment": "*",
-  "entrypoints": {
-    "main": [
-      "io.github.thebluetropics.examplemod.ExampleMod"
-    ],
-    "client": [
-      "io.github.thebluetropics.examplemod.client.ExampleModClient"
-    ]
-  },
-  "mixins": [
-    {
-      "environment": "*",
-      "config": "%mod_id%.common.mixins.json"
-    },
-    {
-      "environment": "client",
-      "config": "%mod_id%.client.mixins.json"
-    }
-  ],
-  "depends": {
-    "minecraft": "1.20.6",
-    "fabricloader": ">=0.16.0",
-    "fabric-api": ">=0.97.8+1.20.6",
-    "java": ">=21"
-  },
-  "provides": [],
-  "breaks": {}
+	"schemaVersion": 1,
+	"id": "%mod_id%",
+	"version": "%version%",
+	"name": "Example Mod",
+	"description": "An example Fabric mod by @thebluetropics",
+	"license": "MIT",
+	"icon": "assets/%mod_id%/icon.png",
+	"authors": [
+		{
+			"name": "thebluetropics",
+			"contact": {
+				"email": "thebluetropics@gmail.com",
+				"homepage": "https://github.com/thebluetropics"
+			}
+		}
+	],
+	"contributors": [],
+	"contact": {
+		"homepage": "https://github.com/thebluetropics/fabric-example-mod",
+		"sources": "https://github.com/thebluetropics/fabric-example-mod",
+		"issues": "https://github.com/thebluetropics/fabric-example-mod/issues"
+	},
+	"custom": {
+		"modmenu": {
+			"links": {
+				"modmenu.discord": "https://discord.com/invite/A9hgghDk48"
+			},
+			"update_checker": false
+		}
+	},
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"io.github.thebluetropics.examplemod.ExampleMod"
+		],
+		"client": [
+			"io.github.thebluetropics.examplemod.client.ExampleModClient"
+		]
+	},
+	"mixins": [
+		{
+			"environment": "*",
+			"config": "%mod_id%.common.mixins.json"
+		},
+		{
+			"environment": "client",
+			"config": "%mod_id%.client.mixins.json"
+		}
+	],
+	"depends": {
+		"minecraft": "1.20.6",
+		"fabricloader": ">=0.16.0",
+		"fabric-api": ">=0.97.8+1.20.6",
+		"java": ">=21"
+	},
+	"provides": [],
+	"breaks": {}
 }

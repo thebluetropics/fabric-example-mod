@@ -1,29 +1,29 @@
 {
-  "schemaVersion": 1,
-  "id": "examplemod",
-  "version": "0.1.0",
-  "name": "Example Mod",
-  "authors": ["thebluetropics"],
-  "license": "MIT",
-  "environment": "*",
-  "entrypoints": {
-    "main": [
-      "io.github.thebluetropics.examplemod.ExampleMod"
-    ],
-    "client": [
-      "io.github.thebluetropics.examplemod.client.ExampleModClient"
-    ]
-  },
-  "mixins": [
-    {
-      "environment": "*",
-      "config": "examplemod.mixins.json"
-    }
-  ],
-  "depends": {
-    "minecraft": "1.14.4",
-    "fabricloader": ">=0.16.0",
-    "fabric": ">=0.28.5+1.14",
-    "java": ">=8"
-  }
+	"schemaVersion": 1,
+	"id": "examplemod",
+	"version": "0.1.0",
+	"name": "Example Mod",
+	"authors": ["thebluetropics"],
+	"license": "MIT",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"io.github.thebluetropics.examplemod.ExampleMod"
+		],
+		"client": [
+			"io.github.thebluetropics.examplemod.client.ExampleModClient"
+		]
+	},
+	"mixins": [
+		{
+			"environment": "*",
+			"config": "examplemod.mixins.json"
+		}
+	],
+	"depends": {
+		"minecraft": "1.14.4",
+		"fabricloader": ">=0.16.0",
+		"fabric": ">=0.28.5+1.14",
+		"java": ">=8"
+	}
 }

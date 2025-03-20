@@ -1,6 +1,6 @@
 {
 	"schemaVersion": 1,
-	"id": "examplemod",
+	"id": "example_mod",
 	"version": "0.1.0",
 	"name": "Example Mod",
 	"authors": ["thebluetropics"],
@@ -17,7 +17,7 @@
 	"mixins": [
 		{
 			"environment": "*",
-			"config": "examplemod.mixins.json"
+			"config": "example_mod.mixins.json"
 		}
 	],
 	"depends": {

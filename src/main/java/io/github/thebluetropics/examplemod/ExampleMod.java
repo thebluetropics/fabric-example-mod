@@ -5,7 +5,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class ExampleMod implements ModInitializer {
-	public static final String ID = "examplemod";
+	public static final String ID = "example_mod";
 	public static final Logger LOGGER = LogManager.getLogger(ID);
 
 	@Override

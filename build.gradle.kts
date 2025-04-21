@@ -3,12 +3,12 @@ plugins {
 	id("maven-publish")
 }
 
-val mod_id = properties["mod_id"] as String
-val artifact_name = properties["artifact_name"] as String
-val minecraft_version = properties["minecraft_version"] as String
+val modId = properties["mod_id"] as String
+val artifactName = properties["artifact_name"] as String
+val minecraftVersion = properties["minecraft_version"] as String
 
 base {
-	archivesName = "${artifact_name}-fabric-${minecraft_version}"
+	archivesName = "${artifactName}-fabric-${minecraftVersion}"
 }
 
 repositories {
@@ -19,7 +19,7 @@ repositories {
 }
 
 dependencies {
-	minecraft("com.mojang:minecraft:${minecraft_version}")
+	minecraft("com.mojang:minecraft:${minecraftVersion}")
 	mappings("net.fabricmc:yarn:${properties["mappings_version"]}:v2")
 	modImplementation("net.fabricmc:fabric-loader:${properties["fabric_loader_version"]}")
 	modImplementation("net.fabricmc.fabric-api:fabric-api:${properties["fabric_api_version"]}")
@@ -43,7 +43,7 @@ loom {
 	}
 
 	mods {
-		create(mod_id) {
+		create(modId) {
 			sourceSet("main")
 		}
 	}
@@ -76,7 +76,7 @@ tasks.processResources {
 tasks.named<Jar>("jar") {
 	from("LICENSE") {
 		rename {
-			"LICENSE-${mod_id}"
+			"LICENSE-${modId}"
 		}
 	}
 }

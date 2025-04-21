@@ -41,11 +41,7 @@
 	"mixins": [
 		{
 			"environment": "*",
-			"config": "%mod_id%.common.mixins.json"
-		},
-		{
-			"environment": "client",
-			"config": "%mod_id%.client.mixins.json"
+			"config": "%mod_id%.mixins.json"
 		}
 	],
 	"depends": {

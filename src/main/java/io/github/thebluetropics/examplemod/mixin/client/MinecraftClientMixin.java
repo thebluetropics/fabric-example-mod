@@ -1,4 +1,4 @@
-package io.github.thebluetropics.examplemod.client.mixin;
+package io.github.thebluetropics.examplemod.mixin.client;
 
 import io.github.thebluetropics.examplemod.client.ExampleModClient;
 import net.minecraft.client.MinecraftClient;
